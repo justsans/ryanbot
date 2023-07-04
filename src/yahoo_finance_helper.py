@@ -8,6 +8,8 @@ class YahooFinanceHelper:
         # print(historical_data)
         db_handler.insert_historical_data(symbol, historical_data)
 
+    def calculate_technicals(self, symbol, data):
+
     def insert_live_prices(self, symbol):
         db_handler = DBHandler()
         live_data = yf.download(symbol, period='1d', interval='5m')
